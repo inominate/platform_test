@@ -11,3 +11,6 @@ defaults[projects][subdir] = contrib
 
 ; Platform indicator module.
 projects[platform][version] = 1.3
+
+projects[admin_menu][version] = "3.0-rc5"
+projects[admin_menu][subdir] = "contrib"
