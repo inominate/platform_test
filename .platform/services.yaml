@@ -4,6 +4,7 @@
 # to power your Platform.sh project.
 
 mysql:
+    size: L
     type: mysql
     disk: 2048
 
