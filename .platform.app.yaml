@@ -24,6 +24,8 @@ web:
     passthru: "/index.php"
     expires: 31536000
     whitelist:
+      #everything in aaa!
+      - ^/aaa/
       # CSS and Javascript.
       - \.css$
       - \.js$
