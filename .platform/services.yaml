@@ -5,11 +5,11 @@
 
 mysql:
     type: mysql
-    disk: 1024
+    disk: 128
 
 redis:
     type: redis
 
 solr:
     type: solr
-    disk: 512
+    disk: 128
