@@ -85,7 +85,7 @@ web:
       - /robots\.txt$
 
 # The size of the persistent disk of the application (in MB).
-disk: 2560
+disk: 256
 size: M
 
 # The mounts that will be performed when the package is deployed.
