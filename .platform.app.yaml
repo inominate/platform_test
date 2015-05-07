@@ -85,7 +85,6 @@ web:
       - /robots\.txt$
     blacklist:
       - ^/aaa/.*\.php$
-      - ^/index2.php$
 
 # The size of the persistent disk of the application (in MB).
 disk: 256
