@@ -25,7 +25,7 @@ web:
     expires: 31536000
     whitelist:
       #everything in aaa!
-      - ^/aaa/.*\.jpg
+      - .*
       # CSS and Javascript.
       - \.css$
       - \.js$
