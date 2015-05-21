@@ -101,6 +101,7 @@ hooks:
       npm install gulp
       mkdir /app/public
       echo '<?php phpinfo();' > /app/public/foo.php
+      df -h | tee /app/private/df.txt
 
     # We run deploy hook after your application has been deployed and started.
     deploy: |
