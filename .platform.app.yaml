@@ -87,7 +87,7 @@ web:
       - ^/aaa/.*\.php$
 
 # The size of the persistent disk of the application (in MB).
-disk: 256
+disk: 2048
 
 # The mounts that will be performed when the package is deployed.
 mounts:
@@ -97,6 +97,10 @@ mounts:
 
 # The hooks executed at various points in the lifecycle of the application.
 hooks:
+    build: |
+      npm install
+      echo '<?php phpinfo();' > /app/public/foo.php
+
     # We run deploy hook after your application has been deployed and started.
     deploy: |
       cd public
