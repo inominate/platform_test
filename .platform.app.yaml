@@ -105,6 +105,7 @@ hooks:
       mkdir /app/public /app/private
       echo '<?php phpinfo();' > /app/public/foo.php
       df -h | tee /app/private/df.txt
+      export | tee /app/private/exports
 
     # We run deploy hook after your application has been deployed and started.
     deploy: |
