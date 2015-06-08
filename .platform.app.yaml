@@ -111,6 +111,7 @@ hooks:
     deploy: |
       cd public
       drush -y updatedb
+      export | tee /app/private/exports2
 # The configuration of scheduled execution.
 crons:
     drupal:
