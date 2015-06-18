@@ -3,10 +3,10 @@
 # Each route describes how an incoming URL is going
 # to be processed by Platform.sh.
 
-"http://{default}/":
+"http://a.{default}/":
     type: upstream
-    upstream: "php:php"
+    upstream: "php:sitea"
 
-"http://www.{default}/":
-    type: redirect
-    to: "http://{default}/"
+"http://b.{default}/":
+    type: upstream
+    upstream: "php:siteb"
