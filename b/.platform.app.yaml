@@ -7,23 +7,17 @@ name: php
 # The toolstack used to build the application.
 toolstack: "php:drupal"
 
-runtime:
-    extensions:
-        - redis
-
 # The relationships of the application with services or other applications.
 # The left-hand side is the name of the relationship as it will be exposed
 # to the application in the PLATFORM_RELATIONSHIPS variable. The right-hand
 # side is in the form `<service name>:<endpoint name>`.
 relationships:
-    database: "mysql:mysql"
-    solr: "solr:solr"
-    redis: "redis:redis"
+    database: "mysqlb:mysql"
 
 # The configuration of app when it is exposed to the web.
 web:
     # The public directory of the app, relative to its root.
-    document_root: "/"
+    document_root: "/a"
     # The front-controller script to send non-static requests to.
     passthru: "/index.php"
     expires: 31536000
@@ -91,7 +85,7 @@ web:
       - ^/aaa/.*\.php$
 
 # The size of the persistent disk of the application (in MB).
-disk: 2048
+disk: 1024
 
 # The mounts that will be performed when the package is deployed.
 mounts:
@@ -99,20 +93,6 @@ mounts:
     "/tmp": "shared:files/tmp"
     "/private": "shared:files/private"
 
-# The hooks executed at various points in the lifecycle of the application.
-hooks:
-    build: |
-      mkdir /app/public /app/private
-      echo '<?php phpinfo();' > /app/public/foo.php
-      df -h | tee /app/private/df.txt
-      export | tee /app/private/exports
-
-    # We run deploy hook after your application has been deployed and started.
-    deploy: |
-      cd public
-      drush -y updatedb
-      export | tee /app/private/exports2
-      php /app/public/bar.php | tee /app/private/foo
 # The configuration of scheduled execution.
 crons:
     drupal:
