@@ -2,7 +2,7 @@
 # in the same project.
 
 # The name of this app. Must be unique within a project.
-name: sitea
+name: mr 
 
 # The toolstack used to build the application.
 toolstack: "php:drupal"
@@ -12,12 +12,12 @@ toolstack: "php:drupal"
 # to the application in the PLATFORM_RELATIONSHIPS variable. The right-hand
 # side is in the form `<service name>:<endpoint name>`.
 relationships:
-    database: "mysqla:mysql"
+    database: "mysqlmr:mysql"
 
 # The configuration of app when it is exposed to the web.
 web:
     # The public directory of the app, relative to its root.
-    document_root: "/public"
+    document_root: "/metrorock.com"
     # The front-controller script to send non-static requests to.
     passthru: "/index.php"
 
@@ -26,12 +26,20 @@ disk: 2048
 
 # The mounts that will be performed when the package is deployed.
 mounts:
-    "/public/sites/default/files": "shared:files/files"
+    "/metrorock.com/sites/default/files": "shared:files/files"
     "/tmp": "shared:files/tmp"
     "/private": "shared:files/private"
+
+# The hooks executed at various points in the lifecycle of the application.
+hooks:
+    # We run deploy hook after your application has been deployed and started.
+    deploy: |
+      cd public
+      drush -y updatedb
 
 # The configuration of scheduled execution.
 crons:
     drupal:
         spec: "*/20 * * * *"
         cmd: "cd public ; drush core-cron"
+

@@ -1,13 +1,6 @@
-# The services of the project.
-#
-# Each service listed will be deployed
-# to power your Platform.sh project.
-
-mysqla:
+mysqlmr:
     type: mysql
     disk: 1500
-mysqlb:
+mysqlup: 
     type: mysql
     disk: 500
-
-

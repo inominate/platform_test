@@ -5,8 +5,8 @@
 
 "http://tbx.innomi.net/":
     type: upstream
-    upstream: "sitea:php"
+    upstream: "mr:php"
 
 "http://tbx2.innomi.net/":
     type: upstream
-    upstream: "siteb:php"
+    upstream: "up:php"
