@@ -3,10 +3,10 @@
 # Each route describes how an incoming URL is going
 # to be processed by Platform.sh.
 
-"http://a.{default}/":
+"http://tbx.innomi.net/":
     type: upstream
     upstream: "sitea:php"
 
-"http://b.{default}/":
+"http://tbx2.innomi.net/":
     type: upstream
     upstream: "siteb:php"
