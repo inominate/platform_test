@@ -9,4 +9,4 @@
 
 "http://b.{default}/":
     type: upstream
-    upstream: "php:siteb"
+    upstream: "siteb:php"
