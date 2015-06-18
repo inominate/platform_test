@@ -5,7 +5,7 @@
 
 "http://a.{default}/":
     type: upstream
-    upstream: "php:sitea"
+    upstream: "sitea:php"
 
 "http://b.{default}/":
     type: upstream
