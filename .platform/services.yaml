@@ -5,15 +5,9 @@
 
 mysqla:
     type: mysql
-    disk: 512
-
+    disk: 1500
 mysqlb:
     type: mysql
-    disk: 512
+    disk: 500
 
-redis:
-    type: redis
 
-solr:
-    type: solr
-    disk: 128
