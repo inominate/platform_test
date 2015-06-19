@@ -3,10 +3,10 @@
 # Each route describes how an incoming URL is going
 # to be processed by Platform.sh.
 
-"http://tbx.innomi.net/":
+"http://{default}/":
     type: upstream
-    upstream: "mr:php"
+    upstream: "php:php"
 
-"http://tbx2.innomi.net/":
-    type: upstream
-    upstream: "up:php"
+"http://www.{default}/":
+    type: redirect
+    to: "http://{default}/"

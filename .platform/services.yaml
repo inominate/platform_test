@@ -1,6 +1,15 @@
-mysqlmr:
+# The services of the project.
+#
+# Each service listed will be deployed
+# to power your Platform.sh project.
+
+mysql:
     type: mysql
-    disk: 1500
-mysqlup: 
-    type: mysql
-    disk: 500
+    disk: 2048
+
+redis:
+    type: redis
+
+solr:
+    type: solr
+    disk: 128
