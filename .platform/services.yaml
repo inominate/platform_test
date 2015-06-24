@@ -12,7 +12,3 @@ redis:
     type: redis
     size: S
 
-solr:
-    type: solr
-    size: S
-    disk: 128
