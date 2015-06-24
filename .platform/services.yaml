@@ -10,6 +10,7 @@ mysql:
 
 redis:
     type: redis
+    size: S
 
 solr:
     type: solr
