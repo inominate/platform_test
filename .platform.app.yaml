@@ -106,6 +106,9 @@ mounts:
 # The hooks executed at various points in the lifecycle of the application.
 hooks:
     build: |
+      npm install pngquant-bin >> build.log 2>&1
+      npm install jpegoptim-bin >> build.log 2>&1
+      npm install jpegtran-bin >> build.log 2>&1
       npm install mozjpeg >> build.log 2>&1
       df -h >> build.log 2>&1
       ls -lh /mnt >> build.log 2>&1
