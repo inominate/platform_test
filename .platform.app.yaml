@@ -107,6 +107,9 @@ mounts:
 hooks:
     build: |
       npm install pngquant-bin
+      npm install jpegoptim-bin
+      npm install jpegtran-bin
+      npm install mozjpeg
 
     # We run deploy hook after your application has been deployed and started.
     deploy: |
