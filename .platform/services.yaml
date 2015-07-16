@@ -5,10 +5,17 @@
 
 mysql:
     type: mysql
-    size: L
-    disk: 2048
+    size: S
+    disk: 1024
 
 redis:
     type: redis
     size: S
 
+solra:
+    type: solr
+    disk: 512
+
+solrb:
+    type: solr
+    disk: 512
