@@ -11,11 +11,3 @@ mysql:
 redis:
     type: redis
     size: S
-
-solra:
-    type: solr:4.10
-    disk: 512
-
-solrb:
-    type: solr:4.10
-    disk: 512
