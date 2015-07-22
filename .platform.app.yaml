@@ -5,11 +5,11 @@
 name: php
 
 # The toolstack used to build the application.
-toolstack: "php:drupal"
+#toolstack: "php:drupal"
 
 type: "php:5.5"
-#build:
-#    flavor: drupal
+build:
+    flavor: symfony
 
 runtime:
     extensions:
