@@ -5,7 +5,9 @@
 name: php
 
 # The toolstack used to build the application.
-toolstack: "php:drupal"
+type: "php:5.6"
+build:
+    flavor: symfony
 
 runtime:
     extensions:
@@ -22,7 +24,7 @@ relationships:
 # The configuration of app when it is exposed to the web.
 web:
     # The public directory of the app, relative to its root.
-    document_root: "/aaa/"
+    document_root: "/root/"
     # The front-controller script to send non-static requests to.
     passthru: "/index.php"
     expires: 31536000
