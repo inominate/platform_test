@@ -11,3 +11,7 @@ mysql:
 redis:
     type: redis
     size: S
+
+es:
+    type: elasticsearch
+    size: S

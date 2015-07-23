@@ -22,6 +22,7 @@ runtime:
 relationships:
     database: "mysql:mysql"
     redis: "redis:redis"
+    elasticsearch: "es:elasticsearch"
 
 # The configuration of app when it is exposed to the web.
 web:
