@@ -14,4 +14,5 @@ redis:
 
 es:
     type: elasticsearch
+    disk: 256
     size: S
