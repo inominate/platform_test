@@ -12,7 +12,7 @@ redis:
     type: redis
     size: S
 
-es:
-    type: elasticsearch
-    disk: 256
-    size: S
+#es:
+#    type: elasticsearch
+#    disk: 256
+#   size: S
