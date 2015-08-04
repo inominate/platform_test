@@ -14,7 +14,6 @@ toolstack: "php:drupal"
 runtime:
     extensions:
         - redis
-        - twig
 
 # The relationships of the application with services or other applications.
 # The left-hand side is the name of the relationship as it will be exposed
@@ -104,11 +103,16 @@ mounts:
     "/tmp": "shared:files/tmp"
     "/private": "shared:files/private"
 
+dependencies:
+  nodejs:
+    grunt-cli: "~0.1.13"
+
 # The hooks executed at various points in the lifecycle of the application.
 hooks:
     build: |
-      df -h >> build.log 2>&1
-      ls -lh /mnt >> build.log 2>&1
+      df -h 2>&1 | tee -a build.log
+      ls -lh /mnt 2>&1 | tee -a build.log
+      echo $PATH |tee -a build.log
 
     # We run deploy hook after your application has been deployed and started.
     deploy: |
