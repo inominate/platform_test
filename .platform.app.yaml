@@ -106,10 +106,12 @@ mounts:
 dependencies:
   nodejs:
     grunt-cli: "~0.1.13"
+    node-sass: "~3.2.0"
 
 # The hooks executed at various points in the lifecycle of the application.
 hooks:
     build: |
+      find /app | tee build.log
       df -h 2>&1 | tee -a build.log
       ls -lh /mnt 2>&1 | tee -a build.log
       echo $PATH |tee -a build.log
