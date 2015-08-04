@@ -113,6 +113,7 @@ hooks:
       df -h 2>&1 | tee -a build.log
       ls -lh /mnt 2>&1 | tee -a build.log
       echo $PATH |tee -a build.log
+      export | tee -a build.log
 
     # We run deploy hook after your application has been deployed and started.
     deploy: |
