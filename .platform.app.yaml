@@ -104,11 +104,6 @@ mounts:
     "/tmp": "shared:files/tmp"
     "/private": "shared:files/private"
 
-dependencies:
-  nodejs:
-    grunt-cli: "~0.1.13"
-    node-sass: "~3.2.0"
-
 # The hooks executed at various points in the lifecycle of the application.
 hooks:
     build: |
