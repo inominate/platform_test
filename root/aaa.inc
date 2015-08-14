@@ -1,2 +1,0 @@
-inc
-<?php phpinfo();
