@@ -1,3 +1,3 @@
-index
+index-github
 <?php phpinfo();
 
