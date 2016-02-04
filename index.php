@@ -1,3 +1,3 @@
-index-github-integration2
+test
 <?php phpinfo();
 
