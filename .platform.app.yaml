@@ -1,5 +1,5 @@
 # 16
-name: "php"
+name: "app"
 
 type: php:7.0
 build:
