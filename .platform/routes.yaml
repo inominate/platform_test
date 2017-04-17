@@ -1,0 +1,20 @@
+https://*.{default}/:
+  to: https://{default}/
+  type: redirect
+https://{default}/:
+  cache:
+    default_ttl: 3600
+    enabled: false
+    headers:
+    - Accept
+    - Accept-Language
+    - Authorization
+  redirects:
+    expires: -1s
+    paths: {}
+  rewrite:
+    type: drupal
+  ssi:
+    enabled: false
+  type: upstream
+  upstream: php:php

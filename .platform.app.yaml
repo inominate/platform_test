@@ -1,0 +1,49 @@
+# 16
+name: "php"
+
+type: php:7.0
+build:
+  flavor: none
+
+#dependencies:
+#  php:
+
+web:
+  locations:
+    "/":
+      root: "public/"
+      passthru: "/index.php"
+      expires: 10m
+      scripts: true
+      allow: true
+      rules:
+        \.mp4$:
+          allow: false
+          expires: -1
+
+access:
+  ssh: viewer
+
+mounts:
+  "/public/media": "shared:files/media"
+  "/private": "shared:files/private"
+  "/cache": "shared:files/cache"
+
+hooks:
+  build: |
+        echo start build
+        echo "DONE"
+
+  deploy: |
+
+relationships:
+  database: "mysql:default"
+  redis: "redis:redis"
+
+disk: 1024
+
+crons:
+  weekly_logrotate:
+    spec: "0 9 * * 7"
+    cmd: "cd /tmp/log;mkdir -p /tmp/old_logs;for i in *.log;do cp $i /tmp/old_logs/$i;echo -n > /var/log/$i;gzip -f /tmp/old_logs/$i;done"
+

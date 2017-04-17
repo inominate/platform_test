@@ -1,0 +1,17 @@
+mysql:
+    type: mysql:10.0
+    disk: 512
+    configuration:
+        schemas:
+            - default
+        endpoints:
+            default:
+                privileges:
+                    default: admin
+
+#rabbitmq:
+#    type: rabbitmq
+#    disk: 256
+
+redis:
+    type: redis
