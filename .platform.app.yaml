@@ -40,7 +40,7 @@ relationships:
   database: "mysql:default"
   redis: "redis:redis"
 
-disk: 1024
+disk: 1200
 
 crons:
   weekly_logrotate:
