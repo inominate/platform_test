@@ -1,4 +1,4 @@
-# 16
+# 17
 name: "app"
 
 type: php:7.0
@@ -40,7 +40,7 @@ relationships:
   database: "mysql:default"
   redis: "redis:redis"
 
-disk: 1024
+disk: 1400
 
 crons:
   weekly_logrotate:
