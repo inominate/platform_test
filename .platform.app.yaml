@@ -1,5 +1,5 @@
 # 16
-name: "php"
+name: "app"
 
 type: php:7.0
 build:
@@ -40,7 +40,7 @@ relationships:
   database: "mysql:default"
   redis: "redis:redis"
 
-disk: 1200
+disk: 1024
 
 crons:
   weekly_logrotate:
